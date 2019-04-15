@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>GPI projekt 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>GPI Projekt 1</h1>
+            <nav>
+                <button onclick="changeColor()">Zmień paletę kolorów</button>
+            </nav>
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="text-center">
+                <img id="image1" src="http://www.reasoft.com/tutorials/web/img/progress.jpg">
+                <img id="image2"
+                    src="https://lwstatic-a.akamaihd.net/kb/wp-content/uploads/2017/12/sleepy-purrito-progressive.jpeg">
+            </div>
+            <h2>Wymagania projektu</h2>
+            <ol style="display: inline-block;">
+                <li>Wykorzystanie preprocesora SCSS do zdefiniowania stylu strony.</li>
+                <li>Zdefiniowanie przynajmniej jednego wykorzystanego koloru w reprezentacji hsl.</li>
+                <li>Przycisk, który zmienia paletę kolorów, aby strona była czytelna dla daltonistów.
+                    Można wspomóc się stroną podaną na pierwszych zajęciach („Projektowanie schematu
+                    kolorów”).</li>
+                <li>Obrazy (rastrowe) w dowolnym formacie. W czasie ładowania obrazu w jego miejscu
+                    musi być element zastępczy (prostokąt lub jakaś forma progresywnego ładowania),
+                    żeby załadowanie nie powodowało przemieszczenia się innych elementów na stronie.</li>
+                <li>Zastosowanie animacji w CSS połączonych z maskowaniem/clippingiem obrazu, czyli
+                    obrazek zmieniający kształt.</li>
+            </ol>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            Wojciech Bełka 122004
+        </div>
+    </footer>
+    <script>
+        function changeColor() {
+            let e = document.getElementsByTagName("html")[0];
+            if (e.classList.contains('dark-mode')) {
+                e.classList.remove('dark-mode');
+            } else {
+                e.classList.add('dark-mode');
+            }
+        }
+    </script>
+</body>
+
+</html>
